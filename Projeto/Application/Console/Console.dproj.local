@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/01/16 20:08:12.000.924,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/02/15 21:42:40.000.716,=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2024/07/20 10:30:23.018,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Console.dproj=C:\Users\gabri\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/07/20 10:30:36.974,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 10:31:18.251,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\MainMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 10:59:43.038,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:00:26.605,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\ClientMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:04:39.617,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:05:01.321,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\Utils\Utils.Console.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:15:56.172,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:16:01.748,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\VehiclesMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:18:07.019,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:18:14.012,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\LocationsMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

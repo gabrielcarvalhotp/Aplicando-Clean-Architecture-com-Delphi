@@ -1,0 +1,13 @@
+unit ClientMenu;
+
+interface
+
+procedure CreateClient;
+procedure GetClient;
+procedure UpdateClient;
+procedure DeleteClient;
+
+
+implementation
+
+end.

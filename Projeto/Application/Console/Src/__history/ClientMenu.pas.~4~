@@ -1,0 +1,37 @@
+unit ClientMenu;
+
+interface
+
+procedure CreateClient;
+procedure GetClient;
+procedure UpdateClient;
+procedure DeleteClient;
+
+implementation
+
+uses
+  Utils.Console;
+
+procedure CreateClient;
+begin
+  CleanConsole;
+  Writeln('Cadastro de cliente');
+  Writeln;
+end;
+
+procedure GetClient;
+begin
+
+end;
+
+procedure UpdateClient;
+begin
+
+end;
+
+procedure DeleteClient;
+begin
+
+end;
+
+end.

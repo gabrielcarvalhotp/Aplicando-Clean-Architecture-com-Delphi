@@ -1,0 +1,47 @@
+unit ClientMenu;
+
+interface
+
+procedure CreateClient;
+procedure GetClient;
+procedure UpdateClient;
+procedure DeleteClient;
+
+implementation
+
+uses
+  Utils.Console, Winapi.Windows;
+
+procedure CreateClient;
+begin
+  CleanConsole;
+  Writeln('Cadastro de cliente');
+  Writeln;
+  Sleep(2000);
+end;
+
+procedure GetClient;
+begin
+  CleanConsole;
+  Writeln('Consultar cliente');
+  Writeln;
+  Sleep(2000);
+end;
+
+procedure UpdateClient;
+begin
+  CleanConsole;
+  Writeln('Atualizar cliente');
+  Writeln;
+  Sleep(2000);
+end;
+
+procedure DeleteClient;
+begin
+  CleanConsole;
+  Writeln('Deletar cliente');
+  Writeln;
+  Sleep(2000);
+end;
+
+end.
