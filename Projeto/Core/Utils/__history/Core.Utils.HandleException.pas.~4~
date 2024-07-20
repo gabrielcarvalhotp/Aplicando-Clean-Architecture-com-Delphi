@@ -1,0 +1,36 @@
+unit Core.Utils.HandleException;
+
+interface
+
+uses
+  Core.Response,
+  System.SysUtils;
+
+function Handle(E: Exception): TResponse;
+
+implementation
+
+uses
+  Core.Exceptions.CustomerExceptions, Core.Enums.ErrorCode;
+
+function Handle(E: Exception): TResponse;
+var
+  LResponse: TResponse;
+begin
+
+  LResponse.Sucess := False;
+  LResponse.Message := E.Message;
+  LResponse.Data := nil;
+
+  if E.ClassType = TCustomerNameException then
+    LResponse.ErrorCode =
+
+    TCustomerNameSizeException = class(Exception);
+  TCustomerDocumentException = class(Exception);
+  TCustomerDocumentSizeException = class(Exception);
+  TCustomerPhoneException = class(Exception);
+  TCustomerPhoneSizeException = class(Exception);
+
+end;
+
+end.

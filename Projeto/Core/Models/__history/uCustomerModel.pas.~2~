@@ -1,0 +1,24 @@
+unit uCustomerModel;
+
+interface
+
+type
+  TCustomer = class
+  private
+    FId: Integer;
+    FName: string;
+    FDocument: string;
+    FAddress: string;
+    FPhone: string;
+  public
+    property Id: Integer read FId write FId;
+    property Name: string read FName write FName;
+    property Document: string read FDocument write FDocument;
+    property Address: string read FAddress write FAddress;
+    property Phone: string read FPhone write FPhone;
+  end;
+
+
+implementation
+
+end.

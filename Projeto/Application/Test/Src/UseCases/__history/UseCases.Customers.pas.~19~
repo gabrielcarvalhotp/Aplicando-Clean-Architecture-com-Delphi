@@ -1,0 +1,116 @@
+unit UseCases.Customers;
+
+interface
+
+uses
+  DUnitX.TestFramework,
+  Core.Models.Customer,
+  Core.Port.Customer;
+
+type
+
+  [TestFixture]
+  TTestCustomersUseCase = class
+  public
+    [Setup]
+    procedure Setup;
+    [TearDown]
+    procedure TearDown;
+    [Test]
+    procedure CreateCustomers;
+    [Test]
+    procedure ValidationName;
+    [Test]
+    procedure ValidationDocument;
+    [Test]
+    procedure ValidationPhone;
+  end;
+
+var
+  FCustomer: TCustomer;
+  FUseCase: ICustomerUseCase;
+
+implementation
+
+uses
+  Core.UseCases.Customer,
+  Core.Response,
+  Core.Enums.ResponseMessage,
+  Core.Enums.ErrorCode;
+
+procedure TTestCustomersUseCase.CreateCustomers;
+var
+  LResponse: TResponse;
+begin
+  with FCustomer do
+  begin
+    Name := 'João da Silva';
+    Document := '12345678910';
+    Phone := '(35)9 9966-8288';
+  end;
+  LResponse := FUseCase.CreateCustomer(FCustomer);
+  Assert.IsTrue(LResponse.Sucess);
+  Assert.AreEqual(TResponseMessage.rmRegisteredSuccessfully.Message, LResponse.Message);
+end;
+
+procedure TTestCustomersUseCase.Setup;
+begin
+  FCustomer := TCustomer.Create;
+  FUseCase := TCustomerUseCase.New;
+end;
+
+procedure TTestCustomersUseCase.TearDown;
+begin
+  FCustomer.Free;
+end;
+
+procedure TTestCustomersUseCase.ValidationDocument;
+var
+  LResponse: TResponse;
+begin
+  with FCustomer do
+  begin
+    Name := 'Joaozinho da Silva';
+    Document := '';
+    Phone := '(35)9 9966-8288';
+  end;
+  LResponse := FUseCase.CreateCustomer(FCustomer);
+  Assert.IsFalse(LResponse.Sucess);
+  Assert.AreEqual(Integer(TCustomerErrorCode.ecEmptyDocument), LResponse.ErrorCode);
+end;
+
+procedure TTestCustomersUseCase.ValidationName;
+var
+  LResponse: TResponse;
+begin
+  with FCustomer do
+  begin
+    Name := '';
+    Document := '12345678910';
+    Phone := '(35)9 9966-8288';
+  end;
+  LResponse := FUseCase.CreateCustomer(FCustomer);
+  Assert.IsFalse(LResponse.Sucess);
+  Assert.AreEqual(Integer(TCustomerErrorCode.ecEmptyName), LResponse.ErrorCode);
+end;
+
+procedure TTestCustomersUseCase.ValidationPhone;
+var
+  LResponse: TResponse;
+begin
+  with FCustomer do
+  begin
+    Name := 'Joaozinho da Silva';
+    Document := '12345678910';
+    Phone := '';
+  end;
+  LResponse := FUseCase.CreateCustomer(FCustomer);
+  Assert.IsFalse(LResponse.Sucess);
+  Assert.AreEqual(Integer(TCustomerErrorCode.ecEmptyDocument), LResponse.ErrorCode);
+end;
+
+initialization
+
+TDUnitX.RegisterTestFixture(TTestCustomersUseCase);
+
+end.

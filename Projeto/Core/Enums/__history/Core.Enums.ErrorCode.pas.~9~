@@ -1,0 +1,27 @@
+unit Core.Enums.ErrorCode;
+
+interface
+
+type
+  TCustomerErrorCode = (ecEmptyName = 100, ecInvalidName = 101, ecEmptyDocument = 102, ecInvalidDocument = 103, ecEmptyPhone = 104,
+    ecInvalidPhose = 105);
+
+  TCustomerErrorCodeHelper = record Helper for TCustomerErrorCode
+    function Value: Integer;
+  end;
+
+implementation
+
+uses
+  TypInfo;
+
+{ TCustomerErrorCodeHelper }
+
+function TCustomerErrorCodeHelper.Value: Integer;
+begin
+  var
+  EnumName := GetEnumName(TypeInfo(TCustomerErrorCode), Integer(Self));
+  GetEnumValue(TypeInfo(TCustomerErrorCode), EnumName);
+end;
+
+end.

@@ -1,0 +1,24 @@
+unit Core.Utils.HandleException;
+
+interface
+
+uses
+  Core.Response,
+  System.SysUtils;
+
+function Handle(E: Exception): TResponse;
+
+implementation
+
+function Handle(E: Exception): TResponse;
+var
+  LResponse: TResponse;
+begin
+
+  LResponse.Sucess := False;
+  LResponse.Message := E.Message;
+  LResponse.Data := nil;
+
+end;
+
+end.

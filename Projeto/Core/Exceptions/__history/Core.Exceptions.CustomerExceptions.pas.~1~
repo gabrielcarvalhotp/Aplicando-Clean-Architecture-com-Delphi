@@ -1,0 +1,7 @@
+unit Core.Exceptions.CustomerExceptions;
+
+interface
+
+implementation
+
+end.

@@ -1,0 +1,19 @@
+unit Core.Port.Customer;
+
+interface
+
+uses
+  Core.Models.Customer;
+
+type
+  ICustomerUseCase = interface
+    ['{A71EBA62-F544-4804-B469-3D8300D476BA}']
+    function Create(ACustomer: TCustomer): IResponse;
+    function Find(ACustomerDTO: TCustomerDTO):IResponse;
+    function Update(ACustomer: TCustomer): IResponse;
+    function Delete(AId: Integer): IResponse;
+  end;
+
+implementation
+
+end.

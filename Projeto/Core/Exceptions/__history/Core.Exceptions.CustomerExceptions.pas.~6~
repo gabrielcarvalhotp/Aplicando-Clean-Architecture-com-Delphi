@@ -1,0 +1,18 @@
+unit Core.Exceptions.CustomerExceptions;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  TCustomerNameException = class(Exception);
+  TCustomerNameSizeException = class(Exception);
+  TCustomerDocumentException = class(Exception);
+  TCustomerDocumentSizeException = class(Exception);
+  TCustomerPhoneExeption = class(Exception);
+  TCustomerPhoneSizeExeption = class(Exception);
+
+implementation
+
+end.

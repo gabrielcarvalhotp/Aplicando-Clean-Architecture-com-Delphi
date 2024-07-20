@@ -14,5 +14,26 @@
     <Transaction>2024/07/20 11:16:01.748,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\VehiclesMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
     <Transaction>2024/07/20 11:18:07.019,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
     <Transaction>2024/07/20 11:18:14.012,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\LocationsMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:34:10.313,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\CustomerMenu.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Src\ClientMenu.pas</Transaction>
+    <Transaction>2024/07/20 11:35:29.252,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:35:48.321,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Models\CustomerModel.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:36:42.687,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Models\uCustomerModel.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Models\CustomerModel.pas</Transaction>
+    <Transaction>2024/07/20 11:41:43.569,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Models\Core.Models.Customer.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Models\uCustomerModel.pas</Transaction>
+    <Transaction>2024/07/20 11:46:28.756,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:47:06.750,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Port\Core.Port.Customer.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:51:26.933,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 11:52:01.896,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Response\Core.Response.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:00:50.762,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:01:18.264,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\DTO\Core.DTO.Customer.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:04:01.202,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:04:23.647,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\UseCases\Core.UseCases.Customer.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:13:13.887,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:13:44.802,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Enums\Core.Enums.ResponseMessage.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:32:59.946,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:34:16.627,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Exceptions\Core.Exceptions.CustomerExceptions.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:52:08.745,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 12:52:29.123,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Enums\Core.Enums.ErrorCode.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 13:17:58.696,=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
+    <Transaction>2024/07/20 13:18:36.074,G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Core\Utils\Core.Utils.HandleException.pas=G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Console\Unit1.pas</Transaction>
   </Transactions>
 </BorlandProject>

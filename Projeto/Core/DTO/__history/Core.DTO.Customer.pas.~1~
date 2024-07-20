@@ -1,0 +1,7 @@
+unit Core.DTO.Customer;
+
+interface
+
+implementation
+
+end.

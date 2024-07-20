@@ -1,0 +1,26 @@
+unit Core.Enums.ResponseMessage;
+
+interface
+
+type
+  TResponseMessage = (rmRegisteredSuccessfully, rmConsultationCompletedSuccessfully, rmChangedSuccessfully, rmDeletedSuccessfully);
+
+  TResponseMessageHelper = record Helper for TResponseMessage
+    function Message: string;
+  end;
+
+implementation
+
+{ TResponseMessageHelper }
+
+function TResponseMessageHelper.Message: string;
+begin
+  case Self of
+    rmRegisteredSuccessfully: Result := '';
+    rmConsultationCompletedSuccessfully: Result := '';
+    rmChangedSuccessfully: Result := '';
+    rmDeletedSuccessfully: Result := '';
+  end;
+end;
+
+end.

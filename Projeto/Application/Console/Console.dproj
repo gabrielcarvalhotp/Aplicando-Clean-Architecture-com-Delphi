@@ -134,10 +134,19 @@
             <MainSource>MainSource</MainSource>
         </DelphiCompile>
         <DCCReference Include="Src\MainMenu.pas"/>
-        <DCCReference Include="Src\ClientMenu.pas"/>
+        <DCCReference Include="Src\CustomerMenu.pas"/>
         <DCCReference Include="Src\Utils\Utils.Console.pas"/>
         <DCCReference Include="Src\VehiclesMenu.pas"/>
         <DCCReference Include="Src\LocationsMenu.pas"/>
+        <DCCReference Include="..\..\Core\Models\Core.Models.Customer.pas"/>
+        <DCCReference Include="..\..\Core\Port\Core.Port.Customer.pas"/>
+        <DCCReference Include="..\..\Core\Response\Core.Response.pas"/>
+        <DCCReference Include="..\..\Core\DTO\Core.DTO.Customer.pas"/>
+        <DCCReference Include="..\..\Core\UseCases\Core.UseCases.Customer.pas"/>
+        <DCCReference Include="..\..\Core\Enums\Core.Enums.ResponseMessage.pas"/>
+        <DCCReference Include="..\..\Core\Exceptions\Core.Exceptions.CustomerExceptions.pas"/>
+        <DCCReference Include="..\..\Core\Enums\Core.Enums.ErrorCode.pas"/>
+        <DCCReference Include="..\..\Core\Utils\Core.Utils.HandleException.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
@@ -1010,6 +1019,7 @@
                 <Platform value="Win32">True</Platform>
                 <Platform value="Win64">False</Platform>
             </Platforms>
+            <ModelSupport>True</ModelSupport>
         </BorlandProject>
         <ProjectFileVersion>12</ProjectFileVersion>
     </ProjectExtensions>

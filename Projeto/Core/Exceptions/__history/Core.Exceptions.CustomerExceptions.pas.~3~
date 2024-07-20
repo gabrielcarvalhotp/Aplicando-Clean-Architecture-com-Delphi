@@ -1,0 +1,13 @@
+unit Core.Exceptions.CustomerExceptions;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+  CustomerValidationException = class(Exception);
+
+implementation
+
+end.

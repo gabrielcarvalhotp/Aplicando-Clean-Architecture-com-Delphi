@@ -4,14 +4,14 @@ interface
 
 procedure Menu;
 
-procedure CallClientsMenu;
+procedure CallCustomersMenu;
 
 procedure CallVehiclesMenu;
 
 procedure CallLocationsMenu;
 
 type
-  TModelType = (mtNull, mtClients, mtVehicles, mtLocations, mtExit);
+  TModelType = (mtNull, mtCustomers, mtVehicles, mtLocations, mtExit);
   TOptionsCrud = (ocNull, ocCreate, ocRead, ocUpdate, ocDelete, ocExit);
 
 const OPTIONS_CRUD = ' 1 - Cadastrar ' + #13#10 +
@@ -25,7 +25,7 @@ implementation
 uses
   Winapi.Windows,
   Utils.Console,
-  ClientMenu,
+  CustomerMenu,
   VehiclesMenu,
   LocationsMenu;
 
@@ -37,7 +37,7 @@ begin
   CleanConsole;
   Writeln('Menu Principal');
   Writeln;
-  LModules := '1 - Clientes' + #13#10 +
+  LModules := '1 - Customeres' + #13#10 +
               '2 - Veículos' + #13#10 +
               '3 - Locações' + #13#10 +
               '4 - Sair';
@@ -46,7 +46,7 @@ begin
   Readln(Input, LModelType);
 
   case TModelType(LModelType) of
-    mtClients: CallClientsMenu;
+    mtCustomers: CallCustomersMenu;
     mtVehicles: CallVehiclesMenu;
     mtLocations: CallLocationsMenu;
     mtExit: ;
@@ -58,21 +58,21 @@ begin
   end;
 end;
 
-procedure CallClientsMenu;
+procedure CallCustomersMenu;
 var
   LOption: Integer;
 begin
   CleanConsole;
-  Writeln('Menu Clientes');
+  Writeln('Menu Customeres');
   Writeln(OPTIONS_CRUD);
   Write(Output, 'Opção: ');
   Readln(Input, LOption);
 
   case TOptionsCrud(LOption) of
-    ocCreate: CreateClient;
-    ocRead: GetClient;
-    ocUpdate: UpdateClient;
-    ocDelete: DeleteClient;
+    ocCreate: CreateCustomer;
+    ocRead: GetCustomer;
+    ocUpdate: UpdateCustomer;
+    ocDelete: DeleteCustomer;
     ocExit: Menu;
     else
     begin

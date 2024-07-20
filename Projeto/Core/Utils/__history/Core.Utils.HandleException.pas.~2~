@@ -1,0 +1,17 @@
+unit Core.Utils.HandleException;
+
+interface
+
+uses
+  Core.Response;
+
+function Handle: TResponse;
+
+implementation
+
+function Handle: TResponse;
+begin
+
+end;
+
+end.

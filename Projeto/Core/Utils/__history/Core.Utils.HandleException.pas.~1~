@@ -1,0 +1,7 @@
+unit Core.Utils.HandleException;
+
+interface
+
+implementation
+
+end.

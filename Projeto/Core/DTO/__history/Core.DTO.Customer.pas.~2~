@@ -1,0 +1,14 @@
+unit Core.DTO.Customer;
+
+interface
+
+type
+  TCustomerDTO = record
+    FId: Integer;
+    FName: string;
+    FDocument: string;
+  end;
+
+implementation
+
+end.

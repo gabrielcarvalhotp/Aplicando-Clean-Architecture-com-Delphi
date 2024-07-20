@@ -1,0 +1,22 @@
+unit Core.Enums.ErrorCode;
+
+interface
+
+type
+  TCustomerErrorCode = (ecEmptyName = 100, ecInvalidName = 101, ecEmptyDocument = 102, ecInvalidDocument = 103, ecEmptyPhone = 104,
+    ecInvalidPhose = 105);
+
+  TCustomerErrorCodeHelper = record Helper for TCustomerErrorCode
+    function Value: Integer;
+  end;
+
+implementation
+
+{ TCustomerErrorCodeHelper }
+
+function TCustomerErrorCodeHelper.Value: Integer;
+begin
+
+end;
+
+end.
