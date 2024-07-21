@@ -1,0 +1,72 @@
+unit Core.Utils.HandleException;
+
+interface
+
+uses
+  Core.Response,
+  System.SysUtils;
+
+function Handle(E: Exception): TResponse;
+
+implementation
+
+uses
+  Core.Exceptions.CustomerExceptions,
+  Core.Exceptions.VehicleExceptions,
+  Core.Enums.ErrorCode;
+
+procedure HandleCustomersException(AClassType: TClass; var AResponse: TResponse);
+begin
+  if AClassType = TCustomerNameException then
+    AResponse.ErrorCode := Integer(TCustomerErrorCode.ecEmptyName);
+
+  if AClassType = TCustomerNameSizeException then
+    AResponse.ErrorCode := Integer(TCustomerErrorCode.ecInvalidName);
+
+  if AClassType = TCustomerDocumentException then
+    AResponse.ErrorCode := Integer(TCustomerErrorCode.ecEmptyDocument);
+
+  if AClassType = TCustomerDocumentSizeException then
+    AResponse.ErrorCode := Integer(TCustomerErrorCode.ecInvalidDocument);
+
+  if AClassType = TCustomerPhoneException then
+    AResponse.ErrorCode := Integer(TCustomerErrorCode.ecEmptyPhone);
+
+  if AClassType = TCustomerPhoneSizeException then
+    AResponse.ErrorCode := Integer(TCustomerErrorCode.ecInvalidPhone);
+end;
+
+procedure HandleVehicleException(AClassType: TClass; var AResponse: TResponse);
+begin
+  if AClassType = TVehicleNameException then
+    AResponse.ErrorCode := 0;
+
+  if AClassType = TVehicleNameSizeException then
+    AResponse.ErrorCode := 0;
+
+  if AClassType = TVehiclePlaceException then
+    AResponse.ErrorCode := 0;
+
+  if AClassType = TVehiclePlaceSizeException then
+    AResponse.ErrorCode := 0;
+
+  if AClassType = TVehiclePriceException then
+    AResponse.ErrorCode := 0;
+end;
+
+function Handle(E: Exception): TResponse;
+var
+  LResponse: TResponse;
+begin
+
+  LResponse.Sucess := False;
+  LResponse.Message := E.Message;
+  LResponse.Data := nil;
+
+  if E is TCustomerException then
+    HandleCustomersException(E.ClassType, LResponse);
+
+  Result := LResponse;
+end;
+
+end.

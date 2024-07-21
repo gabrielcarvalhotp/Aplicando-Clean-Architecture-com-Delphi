@@ -1,0 +1,18 @@
+unit Core.Exceptions.VehicleExceptions;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+
+  TVehicleNameException = class(Exception);
+  TVehicleNameSizeException = class(Exception);
+  TVehiclePlaceException = class(Exception);
+  TVehiclePlaceSizeException = class(Exception);
+  TVehiclePriceException = class(Exception);
+
+implementation
+
+end.

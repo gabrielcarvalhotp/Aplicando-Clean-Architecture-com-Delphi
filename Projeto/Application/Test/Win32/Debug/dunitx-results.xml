@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
-<test-results name="G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Test\Win32\Debug\Test.exe" total="4" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2024-07-20" time="1.992">
+<test-results name="G:\Meu Drive\Udemy\Aplicando clean architecture com Delphi\Projeto\Application\Test\Win32\Debug\Test.exe" total="8" errors="0" failures="0" ignored="0" inconclusive="0" not-run="0" skipped="0" invalid="0" date="2024-07-21" time="3.038">
   <culture-info current-culture="en" current-uiculture="en" />
-  <test-suite type="Assembly" name="Test.exe" executed="true" result="Success" success="True" time="1.992" asserts="0">
+  <test-suite type="Assembly" name="Test.exe" executed="true" result="Success" success="True" time="3.038" asserts="0">
     <results>
-        <test-suite type="Namespace" name="UseCases" executed="true" result="Success" success="True" time="1.992" asserts="0" >
+        <test-suite type="Namespace" name="UseCases" executed="true" result="Success" success="True" time="4.314" asserts="0" >
           <results>
-              <test-suite type="Fixture" name="TTestCustomersUseCase" executed="True" result="Success" success="True" time="1.992" >
+              <test-suite type="Fixture" name="TTestCustomersUseCase" executed="True" result="Success" success="True" time="3.038" >
                 <results>
                   <test-case name="CreateCustomers" executed="True" result="Success" success="True" time="0.000" asserts="0" />
-                  <test-case name="ValidationName" executed="True" result="Success" success="True" time="1.052" asserts="0" />
-                  <test-case name="ValidationDocument" executed="True" result="Success" success="True" time="0.424" asserts="0" />
-                  <test-case name="ValidationPhone" executed="True" result="Success" success="True" time="0.513" asserts="0" />
+                  <test-case name="ValidationName" executed="True" result="Success" success="True" time="0.963" asserts="0" />
+                  <test-case name="ValidationDocument" executed="True" result="Success" success="True" time="0.406" asserts="0" />
+                  <test-case name="ValidationPhone" executed="True" result="Success" success="True" time="0.391" asserts="0" />
+                </results>
+              </test-suite>
+              <test-suite type="Fixture" name="TTestVehicleUseCase" executed="True" result="Success" success="True" time="1.276" >
+                <results>
+                  <test-case name="CreateVehicle" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+                  <test-case name="ValidadeName" executed="True" result="Success" success="True" time="0.430" asserts="0" />
+                  <test-case name="ValidadePrice" executed="True" result="Success" success="True" time="0.420" asserts="0" />
+                  <test-case name="ValidadeLicensePlate" executed="True" result="Success" success="True" time="0.422" asserts="0" />
                 </results>
               </test-suite>
           </results>

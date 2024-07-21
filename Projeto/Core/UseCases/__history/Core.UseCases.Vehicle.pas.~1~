@@ -1,0 +1,7 @@
+unit Core.UseCases.Vehicle;
+
+interface
+
+implementation
+
+end.

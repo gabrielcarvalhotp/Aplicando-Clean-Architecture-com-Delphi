@@ -1,0 +1,27 @@
+unit Core.Enums.VehicleErrorCode;
+
+interface
+
+type
+{$SCOPEDENUMS ON}
+  TVehicleErrorCode = (
+    ecEmptyName = 151,
+    ecInvalidName = 151,
+    ecEmptyPlace = 152,
+    ecInvalidPlace = 153,
+    ecEmptyPrice = 154
+  );
+{$SCOPEDENUMS OFF}
+
+{
+  TVehicleNameException = class(TVehicleException);
+  TVehicleNameSizeException = class(TVehicleException);
+  TVehiclePlaceException = class(TVehicleException);
+  TVehiclePlaceSizeException = class(TVehicleException);
+  TVehiclePriceException = class(TVehicleException);
+
+}
+
+implementation
+
+end.

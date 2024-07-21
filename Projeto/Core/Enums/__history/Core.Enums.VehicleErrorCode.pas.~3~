@@ -1,0 +1,19 @@
+unit Core.Enums.VehicleErrorCode;
+
+interface
+
+type
+{$SCOPEDENUMS ON}
+  TCustomerErrorCode = (
+    ecEmptyName = 151,
+    ecInvalidName = 151,
+    ecEmptyDocument = 152,
+    ecInvalidDocument = 153,
+    ecEmptyPhone = 154,
+    ecInvalidPhone = 155
+  );
+{$SCOPEDENUMS OFF}
+
+implementation
+
+end.

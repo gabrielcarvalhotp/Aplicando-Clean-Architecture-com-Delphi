@@ -1,0 +1,7 @@
+unit Core.Port.Vehicle;
+
+interface
+
+implementation
+
+end.

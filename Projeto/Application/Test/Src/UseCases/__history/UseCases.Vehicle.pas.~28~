@@ -1,0 +1,140 @@
+unit UseCases.Vehicle;
+
+interface
+
+uses
+  DUnitX.TestFramework,
+  Core.Models.Vehicle,
+  Core.Port.Vehicle;
+
+type
+
+  [TestFixture]
+  TTestVehicleUseCase = class
+  public
+    [Setup]
+    procedure Setup;
+    [TearDown]
+    procedure TearDown;
+    [Test]
+    procedure CreateVehicle;
+    [Test]
+    procedure ValidadeName;
+    [Test]
+    procedure ValidadePrice;
+    [Test]
+    procedure ValidadeLicensePlate;
+  end;
+
+{
+  if Trim(FName).IsEmpty then
+    raise TVehicleNameException.Create('Nome deve ser informado');
+
+  if Trim(FName).Length < 3 then
+    raise TVehicleNameSizeException.Create('Nome deve ser maior que 3 caracteres');
+
+  if Trim(FLicensePlate).IsEmpty then
+    raise TVehiclePlaceException.Create('Placa deve ser informada');
+
+  if Trim(FLicensePlate).Length < 6  then
+    raise TVehiclePlaceSizeException.Create('Placa deve ser maior que 6 caracteres');
+
+  if FValue <= 0 then
+    raise TVehiclePriceException.Create('Valor deve ser informado');
+}
+
+var
+  FVehicle: TVehicle;
+  FUseCase: IVehicleUseCase;
+
+implementation
+
+uses
+  System.Classes,
+  System.SysUtils,
+  Core.UseCases.Vehicle,
+  Core.Response,
+  Core.Enums.VehicleStatus,
+  Core.Enums.VehicleErrorCode,
+  Core.Enums.ResponseMessage;
+
+procedure TTestVehicleUseCase.Setup;
+begin
+  FVehicle := TVehicle.Create;
+  FUseCase := TVehicleUseCase.New;
+end;
+
+procedure TTestVehicleUseCase.TearDown;
+begin
+  FVehicle.DisposeOf;
+end;
+
+procedure TTestVehicleUseCase.ValidadeLicensePlate;
+var
+  LRespose: TResponse;
+begin
+  with FVehicle do
+  begin
+    Name := '2014 BMW M3 Sedan F80';
+    LicensePlate := '4JJR ';
+    Value := 250.99;
+    Status := vsAvailable;
+  end;
+  LRespose := FUseCase.CreateVehicle(FVehicle);
+  Assert.IsFalse(LRespose.Sucess);
+  Assert.AreEqual(Integer(TVehicleErrorCode.ecEmptyName), LRespose.ErrorCode);
+end;
+
+procedure TTestVehicleUseCase.ValidadeName;
+var
+  LRespose: TResponse;
+begin
+  with FVehicle do
+  begin
+    Name := '';
+    LicensePlate := 'WIE 2708';
+    Value := 250.99;
+    Status := vsAvailable;
+  end;
+  LRespose := FUseCase.CreateVehicle(FVehicle);
+  Assert.IsFalse(LRespose.Sucess);
+  Assert.AreEqual(Integer(TVehicleErrorCode.ecEmptyName), LRespose.ErrorCode);
+end;
+
+procedure TTestVehicleUseCase.ValidadePrice;
+var
+  LRespose: TResponse;
+begin
+  with FVehicle do
+  begin
+    Name := '1981 DeLorean DMC-12';
+    LicensePlate := '299 9057';
+    Value := 0;
+    Status := vsAvailable;
+  end;
+  LRespose := FUseCase.CreateVehicle(FVehicle);
+  Assert.IsFalse(LRespose.Sucess);
+  Assert.AreEqual(Integer(TVehicleErrorCode.ecEmptyPrice), LRespose.ErrorCode);
+end;
+
+procedure TTestVehicleUseCase.CreateVehicle;
+var
+  LRespose: TResponse;
+begin
+  with FVehicle do
+  begin
+    Name := '2007 Honda RA107';
+    LicensePlate := 'WIE 2708';
+    Value := 250.99;
+    Status := vsAvailable;
+  end;
+  LRespose := FUseCase.CreateVehicle(FVehicle);
+  Assert.IsTrue(LRespose.Sucess);
+  Assert.AreEqual(rmRegisteredSuccessfully.Message, LRespose.Message);
+end;
+
+initialization
+
+TDUnitX.RegisterTestFixture(TTestVehicleUseCase);
+
+end.

@@ -89,14 +89,24 @@
         </DelphiCompile>
         <DCCReference Include="Src\UseCases\UseCases.Customers.pas"/>
         <DCCReference Include="..\..\Core\DTO\Core.DTO.Customer.pas"/>
-        <DCCReference Include="..\..\Core\Enums\Core.Enums.ErrorCode.pas"/>
+        <DCCReference Include="..\..\Core\Enums\Core.Enums.CustomerErrorCode.pas"/>
         <DCCReference Include="..\..\Core\Enums\Core.Enums.ResponseMessage.pas"/>
         <DCCReference Include="..\..\Core\Exceptions\Core.Exceptions.CustomerExceptions.pas"/>
         <DCCReference Include="..\..\Core\Models\Core.Models.Customer.pas"/>
         <DCCReference Include="..\..\Core\Port\Core.Port.Customer.pas"/>
         <DCCReference Include="..\..\Core\Response\Core.Response.pas"/>
         <DCCReference Include="..\..\Core\UseCases\Core.UseCases.Customer.pas"/>
-        <DCCReference Include="..\..\Core\Utils\Core.Utils.HandleException.pas"/>
+        <DCCReference Include="..\..\Core\Utils\Core.Utils.HandleException.pas">
+            <Form>$IFNDEF TESTINSIGHT</Form>
+        </DCCReference>
+        <DCCReference Include="..\..\Core\Models\Core.Models.Vehicle.pas"/>
+        <DCCReference Include="..\..\Core\Enums\Core.Enums.VehicleStatus.pas"/>
+        <DCCReference Include="..\..\Core\DTO\Core.DTO.Vehicle.pas"/>
+        <DCCReference Include="..\..\Core\Port\Core.Port.Vehicle.pas"/>
+        <DCCReference Include="..\..\Core\UseCases\Core.UseCases.Vehicle.pas"/>
+        <DCCReference Include="..\..\Core\Exceptions\Core.Exceptions.VehicleExceptions.pas"/>
+        <DCCReference Include="..\..\Core\Enums\Core.Enums.VehicleErrorCode.pas"/>
+        <DCCReference Include="Src\UseCases\UseCases.Vehicle.pas"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

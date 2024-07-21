@@ -1,0 +1,7 @@
+unit Core.Exceptions.VehicleExceptions;
+
+interface
+
+implementation
+
+end.

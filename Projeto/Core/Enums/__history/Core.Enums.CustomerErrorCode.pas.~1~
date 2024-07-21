@@ -1,0 +1,23 @@
+unit Core.Enums.CustomerErrorCode;
+
+interface
+
+type
+  TCustomerErrorCode = (ecEmptyName = 100, ecInvalidName = 101, ecEmptyDocument = 102, ecInvalidDocument = 103, ecEmptyPhone = 104,
+    ecInvalidPhone = 105);
+
+//  TVehicleErrorCode = (ecEmptyName = 151);
+
+{
+  TVehicleNameException = class(TVehicleException);
+  TVehicleNameSizeException = class(TVehicleException);
+  TVehiclePlaceException = class(TVehicleException);
+  TVehiclePlaceSizeException = class(TVehicleException);
+  TVehiclePriceException = class(TVehicleException);
+}
+
+implementation
+
+{ TCustomerErrorCodeHelper }
+
+end.

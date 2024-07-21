@@ -1,0 +1,43 @@
+unit Core.Models.Vehicle;
+
+interface
+
+uses
+  Core.Enums.VehicleStatus;
+
+type
+  TVehicle = class
+  private
+    { private declarations }
+    FName: string;
+    FId: Integer;
+    FStatus: TVehicleStatus;
+    FValue: Currency;
+    FLicensePlate: string;
+  public
+    { public }
+    constructor Create;
+    destructor Destroy; override;
+    property Id: Integer read FId write FId;
+    property Name: string read FName write FName;
+    property LicensePlate: string read FLicensePlate write FLicensePlate;
+    property Value: Currency read FValue write FValue;
+    property Status: TVehicleStatus read FStatus write FStatus;
+  end;
+
+implementation
+
+{ TVehicle }
+
+constructor TVehicle.Create;
+begin
+
+end;
+
+destructor TVehicle.Destroy;
+begin
+  inherited;
+
+end;
+
+end.

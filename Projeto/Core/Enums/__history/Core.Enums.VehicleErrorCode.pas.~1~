@@ -1,0 +1,7 @@
+unit Core.Enums.VehicleErrorCode;
+
+interface
+
+implementation
+
+end.

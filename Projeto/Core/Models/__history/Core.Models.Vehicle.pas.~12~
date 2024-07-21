@@ -1,0 +1,77 @@
+unit Core.Models.Vehicle;
+
+interface
+
+uses
+  Core.Enums.VehicleStatus,
+  Core.Exceptions.VehicleExceptions;
+
+type
+  TVehicle = class
+  private
+    { Private declarations }
+    FId: Integer;
+    FName: string;
+    FLicensePlate: string;
+    FStatus: TVehicleStatus;
+    FValue: Currency;
+  public
+    { Public declarations }
+    constructor Create;
+    destructor Destroy; override;
+    property Id: Integer read FId write FId;
+    property Name: string read FName write FName;
+    property LicensePlate: string read FLicensePlate write FLicensePlate;
+    property Value: Currency read FValue write FValue;
+    property Status: TVehicleStatus read FStatus write FStatus;
+
+    procedure RulesBusinessValidation;
+  end;
+
+implementation
+
+{ TVehicle }
+
+uses
+  System.SysUtils,
+  System.StrUtils;
+
+constructor TVehicle.Create;
+begin
+
+end;
+
+destructor TVehicle.Destroy;
+begin
+  inherited;
+
+end;
+
+procedure TVehicle.RulesBusinessValidation;
+begin
+
+{
+  - Não permtir persistir veículo sem o nome.
+  - Nao permitir persisitr veículo com nome menor do que 3 caracteres.
+  - Não permitiir persistir veículo sem a placa.
+  - Não permitir persistir veículo com placa menor do que 6 caracteres.
+  - Não permitir persistir veículo com valor menor ou igual a zero
+}
+
+  if Trim(FName).IsEmpty then
+    raiseException.Create('Error Message');
+  if Trim(FName).Length < 3 then
+    raise Exception.Create('Error Message');
+  if Trim(FLicensePlate).IsEmpty then
+    raise Exception.Create('Error Message');
+  if Trim(FLicensePlate).Length < 6  then
+    raise Exception.Create('Error Message');
+  if FValue <= 0 then
+    raise Exception.Create('Error Message');
+
+
+
+
+end;
+
+end.

@@ -36,7 +36,7 @@ uses
   Core.UseCases.Customer,
   Core.Response,
   Core.Enums.ResponseMessage,
-  Core.Enums.ErrorCode;
+  Core.Enums.CustomerErrorCode;
 
 procedure TTestCustomersUseCase.CreateCustomers;
 var

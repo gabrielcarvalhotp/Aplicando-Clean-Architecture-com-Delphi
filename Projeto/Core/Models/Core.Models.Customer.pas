@@ -39,13 +39,13 @@ begin
     raise TCustomerDocumentException.Create('Documento deve ser informado');
 
   if Length(FDocument) <= 4 then
-    raise TCustomerDocumentSizeException.Create('Documento deve conter no minímo 4 caracteres');
+    raise TCustomerDocumentSizeException.Create('Documento deve conter no minímo 5 caracteres');
 
   if Trim(FPhone).IsEmpty then
     raise TCustomerPhoneException.Create('Telefone deve ser informado');
 
   if Length(FPhone) <= 4 then
-    raise TCustomerPhoneSizeException.Create('Telefone deve conter no minímo 4 caracteres');
+    raise TCustomerPhoneSizeException.Create('Telefone deve conter no minímo 5 caracteres');
 end;
 
 end.

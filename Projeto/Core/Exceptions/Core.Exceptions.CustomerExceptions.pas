@@ -6,12 +6,14 @@ uses
   System.SysUtils;
 
 type
-  TCustomerNameException = class(Exception);
-  TCustomerNameSizeException = class(Exception);
-  TCustomerDocumentException = class(Exception);
-  TCustomerDocumentSizeException = class(Exception);
-  TCustomerPhoneException = class(Exception);
-  TCustomerPhoneSizeException = class(Exception);
+  TCustomerException = class(Exception);
+
+  TCustomerNameException = class(TCustomerException);
+  TCustomerNameSizeException = class(TCustomerException);
+  TCustomerDocumentException = class(TCustomerException);
+  TCustomerDocumentSizeException = class(TCustomerException);
+  TCustomerPhoneException = class(TCustomerException);
+  TCustomerPhoneSizeException = class(TCustomerException);
 
 implementation
 

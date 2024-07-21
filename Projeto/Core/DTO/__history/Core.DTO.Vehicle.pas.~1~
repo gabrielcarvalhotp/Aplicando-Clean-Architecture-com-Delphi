@@ -1,0 +1,7 @@
+unit Core.DTO.Vehicle;
+
+interface
+
+implementation
+
+end.
